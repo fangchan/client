@@ -1,0 +1,86 @@
+/* src/BuyEaseForm.module.css */
+
+h1 {
+    text-align: center;
+}
+
+.logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px; /* 增加底部邊距以獲得更均勻的間距 */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.upload-container {
+    display: flex;
+    align-items: center;
+}
+
+.upload-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.upload-button input {
+    display: none; /* Hide the default file input */
+}
+
+.upload-icon {
+    font-size: 24px; /* Adjust size as needed */
+    margin-left: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6A5ACD; /* Example color */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px; /* 在按鈕上方增加邊距 */
+}
+
+button:hover {
+    background-color: #6A5ACD; /* Darker shade */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and menu icon */
+    align-items: center; /* Center vertically */
+    padding: 10px; /* Adjust padding as needed */
+}
+
+/* Media Queries for Desktop */

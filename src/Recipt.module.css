@@ -1,0 +1,100 @@
+/* Recipt.module.css */
+
+
+.header {
+    text-align: center;
+    font-size: 24px; /* Font size */
+    color: #6200ea; /* Main color */
+    margin-bottom: 20px; /* Space below header */
+}
+
+.receipt {
+    margin-bottom: 20px; /* Space below receipt items */
+    flex-grow: 1; /* Allow receipt section to grow */
+}
+
+.item {
+    display: flex;
+    align-items: center; /* Center align items */
+    margin-bottom: 15px; /* Space between items */
+    padding: 10px;
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 10px; /* Rounded edges */
+}
+
+.itemImage {
+    width: 60px; /* Image width */
+    height: 60px; /* Image height */
+    border-radius: 10px; /* Rounded edges */
+    margin-right: 10px; /* Space to the right */
+}
+
+.itemDetails {
+    flex-grow: 1; /* Allow details to fill available space */
+}
+
+.itemName {
+    font-size: 18px; /* Item name font size */
+    margin: 0; /* Remove default margin */
+}
+
+.itemPrice {
+    color: #333; /* Price color */
+}
+
+.itemQuantity {
+    color: #666; /* Quantity color */
+}
+
+.total {
+    text-align: center; /* Center align total */
+    margin-top: 20px; /* Space above total */
+}
+
+.button {
+   background-color: #6200ea; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 20px; /* Rounded edges */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Transition effect */
+    width: 100%; /* Full width for the button */
+    position: static; /* Set position to static */
+    z-index: 10; /* Ensure it appears above other elements */
+    
+}
+
+.button:hover {
+    background-color: #3700b3; /* Darker shade on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 480px) {
+    .header {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+
+    .item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to the start */
+    }
+
+    .itemImage {
+        margin-bottom: 10px; /* Space below image */
+    }
+
+    .itemName {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .itemPrice,
+    .itemQuantity {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .button {
+        padding: 12px; /* Increase padding for touch targets */
+    }
+}

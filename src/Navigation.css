@@ -1,0 +1,92 @@
+.container {
+    max-width: 400px; /* Adjusted for mobile */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background */
+    margin: auto; /* Center the page */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: auto; /* Allow height to auto-adjust */
+    min-height: 100vh; /* Ensure it covers full viewport height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children vertically */
+    /*justify-content: space-between; /* Space out children */
+}
+
+body {
+    background-color: #000000; /* Set a light background color */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set a default font */
+}
+
+.navigation-container {
+    display: flex; /* 使用 Flexbox */
+    align-items: center; /* 垂直居中對齊 */
+    justify-content: space-between; /* 在左右兩側分配空間 */
+    padding: 10px; /* 添加一些內邊距 */
+    position: relative; /* 使下拉菜單定位相對於此容器 */
+    width: 100%; /* 使導航容器佔滿整個寬度 */
+}
+
+.logo-container {
+    align-items: center; /* 垂直居中對齊 */
+    flex: 1; /* 使標題佔據剩餘空間 */
+    text-align: center; /* 標題居中 */
+}
+
+.logo {
+    width: 150px; /* 調整 logo 大小 */
+    height: auto; /* 維持比例 */
+}
+
+.menu-icon {
+    width: 24px; /* 調整圖標大小 */
+    height: 24px; /* 調整圖標大小 */
+    cursor: pointer; /* 互動性指標 */
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Styles for dropdown menu */
+.dropdown-menu {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    background-color: #f8f9fa; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow */
+    padding: 10px; /* Padding for the menu */
+    position: absolute; /* Position it absolutely */
+    top: 100%; /* Align the top of the dropdown below the icon */
+    left: 0; /* Aligns the dropdown to the left */
+    z-index: 10; /* Ensure it appears above other elements */
+    max-width: fit-content; /* Set max width to fit the longest title */
+    width: auto; /* Ensure it takes the width of the content */
+}
+
+/* Styling individual links */
+.dropdown-menu a {
+    padding: 10px; /* Padding for links */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Link color */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.dropdown-menu a:hover {
+    background-color: #e2e2e2; /* Change background on hover */
+}
+
+ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+@media (min-width: 768px) {
+    .form-container {
+        max-width: 600px; /* Set max width for desktop */
+    }
+}

@@ -1,0 +1,37 @@
+/* Statistics.module.css */
+
+.container {
+    padding: 20px;
+    background-color: #ffffff; /* White background for the container */
+    max-width: 600px; /* Maximum width */
+    margin: auto; /* Center the page */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.header {
+    text-align: center;
+    font-size: 24px; /* Font size */
+    color: #6200ea; /* Main color */
+    margin-bottom: 20px; /* Space below header */
+}
+
+.footer {
+    text-align: center; /* Center align footer */
+    margin-top: 20px; /* Space above footer */
+}
+
+.button {
+    background-color: #6200ea; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 20px; /* Rounded edges */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.button:hover {
+    background-color: #3700b3; /* Darker shade on hover */
+}
