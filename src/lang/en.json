@@ -47,7 +47,7 @@
     "View My Coupons": "View My Coupons",
     "Guest Menu": "Guest Menu",
     "Register Account": "Register Account",
-    "Sign Up As Buyer": "Sign Up As Buyer",
+    "Sign Up as Buyer": "Sign Up as Buyer",
     "Login": "Login",
     "Register": "Register",
     "Forgot Password": "Forgot Password",
@@ -75,5 +75,8 @@
     "Chinese": "Chinese",
     "Username": "Username",
     "Password": "Password",
-    "Sign Up": "Sign Up"
+    "Sign Up": "Sign Up",
+    "Browse Shops": "Browse Shops",
+    "View by Category": "View by Category",
+    "Search Shops": "Search Shops"
   }

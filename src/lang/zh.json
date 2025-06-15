@@ -47,7 +47,7 @@
     "View My Coupons": "查看我的禮卷",
     "Guest Menu": "未登錄用戶菜單",
     "Register Account": "注冊賬號",
-    "Sign Up As Buyer": "注冊為買家",
+    "Sign Up as Buyer": "注冊為買家",
     "Login": "登錄",
     "Register": "注冊",
     "Forgot Password": "忘記密碼",
@@ -75,5 +75,8 @@
     "Chinese": "中文",
     "Username": "用戶名稱",
     "Password": "密碼",
-    "Sign Up": "登記"
+    "Sign Up": "登記",
+    "Browse Shops": "瀏覽店鋪",
+    "View by Category": "按類別查看",
+    "Search Shops": "搜索店鋪"
   }

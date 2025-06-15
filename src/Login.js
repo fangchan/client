@@ -11,7 +11,7 @@ const Login = ({ isLoggedIn, onLoginSuccess }) => {
     // Redirect if the user is already logged in
     useEffect(() => {
         if (isLoggedIn) {
-            navigate('/Recipt');
+            navigate('/');
         }
     }, [isLoggedIn, navigate]);
 
@@ -25,7 +25,7 @@ const Login = ({ isLoggedIn, onLoginSuccess }) => {
                 const { token, user } = response.data; // Get token and user object
                 const { username, role } = user; // Extract username and role from user object
                 onLoginSuccess(token, { username, role }); // Pass token and user info
-                navigate('/Recipt'); // Redirect after successful login
+                navigate('/'); // Redirect after successful login
             } else {
                 alert('Unexpected response format');
             }

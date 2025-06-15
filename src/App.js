@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
 import Navigation from './Navigation';
 import Signup from './Signup';
 import Login from './Login';
@@ -61,12 +62,13 @@ function App() {
                 <h1>{t('welcome')}</h1>
                 <p>{t('description')}</p>
                 <button onClick={() => changeLanguage('en')}>English</button>
-                <button onClick={() => changeLanguage('cn')}>中文</button>
-                <button onClick={() => changeLanguage('zh')}>中文 (Simplified)</button>
+                <button onClick={() => changeLanguage('cn')}>简体</button>
+                <button onClick={() => changeLanguage('zh')}>繁體</button>
             </div>
             <div className="container">
                 <Navigation onLogout={handleLogout} role={role} username={username} isLoggedIn={isLoggedIn} />
                 <Routes>
+                     <Route path="/" element={<Home />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/login" element={<Login isLoggedIn={isLoggedIn} onLoginSuccess={handleLoginSuccess} />} />
                     <Route path="/statistic" element={<Statistics />} />
