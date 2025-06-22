@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'; // Import useTranslation
+import styles from './Signup.module.css'; // Import the CSS module
 
 const SignupAndSendEmail = () => {
     const { t } = useTranslation(); // Use the translation hook
@@ -10,6 +11,7 @@ const SignupAndSendEmail = () => {
     const [role, setRole] = useState('buyer'); // Default role
     const [email, setEmail] = useState('');
     const [generatedPassword, setGeneratedPassword] = useState('');
+    const [loading, setLoading] = useState(false); // Loading state
 
     const navigate = useNavigate();
 
@@ -19,9 +21,10 @@ const SignupAndSendEmail = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true); // Set loading to true
         try {
             // First, sign up the user
-            await axios.post('http://localhost:5000/signup', { username, password, role, email,generatedPassword});
+            await axios.post('http://localhost:5000/signup', { username, password, role, email, generatedPassword });
             alert(t('User created!')); // Use translation for alerts
 
             // Then, send the email with the generated password
@@ -34,7 +37,9 @@ const SignupAndSendEmail = () => {
             alert(t('Email sent successfully!')); // Success message for email
             navigate('/'); // Redirect to the root path
         } catch (error) {
-            alert(t('Signup failed: ') + error.response?.data || error.message);
+            alert(t('Signup failed: ') + (error.response?.data || error.message));
+        } finally {
+            setLoading(false); // Reset loading state
         }
     };
 
@@ -51,6 +56,11 @@ const SignupAndSendEmail = () => {
 
     return (
         <div>
+            {loading && (
+                <div className={styles.loadingOverlay}>
+                    <div className={styles.loadingIcon}>Loading...</div>
+                </div>
+            )}
             <h1>{t('Signup and Send Email')}</h1>
             <form onSubmit={handleSubmit}>
                 <input
@@ -65,13 +75,12 @@ const SignupAndSendEmail = () => {
                     placeholder={t('Password')}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                  
                 />
                 <input
-                type="text"
-                placeholder={t('Generated Password')}
-                value={generatedPassword}
-                readOnly // Make this input read-only
+                    type="text"
+                    placeholder={t('Generated Password')}
+                    value={generatedPassword}
+                    readOnly // Make this input read-only
                 />
                 <input
                     type="email"
@@ -85,10 +94,9 @@ const SignupAndSendEmail = () => {
                     <option value="shopuser">{t('Shop User')}</option>
                     <option value="buyer">{t('Buyer')}</option>
                 </select>
+                <br /> <br />
                 <button type="submit">{t('Sign Up and Send Email')}</button>
-                
             </form>
-            
         </div>
     );
 };

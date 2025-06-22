@@ -299,6 +299,7 @@ const Navigation = ({ onLogout, role,username, isLoggedIn }) => {
                               <Link to="/OrderPage" onClick={toggleMenu}>{t('OrderPage')}</Link>
                               <Link to="/productslist" onClick={toggleMenu}>{t('Products List')}</Link>
                               <Link to="/coursetest" onClick={toggleMenu}>{t('Course Test')}</Link>
+                             <Link to="/passwordreset" onClick={toggleMenu}>{t('Password Reset')}</Link>
                             <Link to="/" onClick={() => { onLogout(); toggleMenu(); }}>{t('Logout')}</Link>
                             </>
                         )}

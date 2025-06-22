@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Navigation from './Navigation';
-import Signup from './Signup';
-import Login from './Login';
+import Signup from './login/Signup';
+import Login from './login/Login';
+import Forget from './login/Forget';
 import Statistics from './Statistics';
 import BuyEaseForm from './BuyEaseForm';
 import Recipt from './Recipt';
@@ -11,6 +12,8 @@ import OrderPage from './OrderPage';
 import ProductsList from './ProductsList';
 import CourseTest from './coursetest';
 import SendEmail from './SendEmail';
+import PasswordReset from './login/PasswordReset';
+
 import { useTranslation } from 'react-i18next';
 import './i18n'; // Ensure this import is correct
 import i18n from './i18n'; // Import the i18n instance for language changes
@@ -71,6 +74,7 @@ function App() {
                      <Route path="/" element={<Home />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/login" element={<Login isLoggedIn={isLoggedIn} onLoginSuccess={handleLoginSuccess} />} />
+                    <Route path="/Forget" element={<Forget/>} />
                     <Route path="/statistic" element={<Statistics />} />
                     <Route path="/BuyEaseForm" element={<BuyEaseForm />} />
                     <Route path="/Recipt" element={<Recipt />} />
@@ -78,6 +82,7 @@ function App() {
                     <Route path="/productslist" element={<ProductsList />} />
                     <Route path="/coursetest" element={<CourseTest />} />
                     <Route path="/SendEmail" element={<SendEmail />} />
+                     <Route path="/passwordreset" element={<PasswordReset username={username}/>} />
                 </Routes>
             </div>
         </Router>
